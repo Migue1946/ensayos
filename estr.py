@@ -12,7 +12,7 @@ from scipy import stats
 
 df=pd.read_excel('C:/Users/Lenovo/Desktop/ENSAYOS/Ensayo.xlsx')
 #print(df)
-st.write(df)
+#st.write(df)
 
 mediat=df['tratado'].mean() #esta es la media. En describe figura como mean
 mediac=df['control'].mean()
