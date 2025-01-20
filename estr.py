@@ -14,6 +14,7 @@ df=pd.read_excel('C:/Users/Lenovo/Desktop/ENSAYOS/Ensayo.xlsx')
 #print(df)
 #st.write(df)
 
+
 mediat=df['tratado'].mean() #esta es la media. En describe figura como mean
 mediac=df['control'].mean()
 
@@ -33,4 +34,4 @@ with st.sidebar:
 
 st.title('Datos del Ensayo')
 fig= px.line(df,x='sitio',y= parVariable,title=f'{parVariable}')
-st.plotly_chart(fig,use_container_width=True)
+st.plotly_chart(fig, use_container_width=True)
