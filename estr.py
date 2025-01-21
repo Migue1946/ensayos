@@ -1,7 +1,7 @@
 
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+import plotly.express as pxx
 
 import numpy as np
 from matplotlib import pyplot as plt
@@ -21,7 +21,7 @@ st.title('Datos del Ensayo')
 st.write(df)
 
 
-fig= px.line(df,x='sitio',y= parVariable,title=f'{parVariable}')
+fig= pxx.line(df,x='sitio',y= parVariable,title=f'{parVariable}')
 st.plotly_chart(fig, use_container_width=True)
 
 
