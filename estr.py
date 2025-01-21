@@ -1,12 +1,12 @@
 
 import streamlit as st
 import pandas as pd
-import plotly.express as pxx
+import plotly.express as px
 
 import numpy as np
 from matplotlib import pyplot as plt
-import math
-from scipy import stats
+
+
 #Cursera Colombia  Analisis de DataFrame"
 
 
@@ -18,10 +18,17 @@ with st.sidebar:
     parVariable=st.selectbox('Variable',options=opciones)
 
 st.title('Datos del Ensayo')
-st.write(df)
+#st.write(df)
+'''
 
-
-fig= pxx.line(df,x='sitio',y= parVariable,title=f'{parVariable}')
+fig= px.bar(df,x='sitio',y= parVariable,title=f'{parVariable}')
 st.plotly_chart(fig, use_container_width=True)
 
+'''
+fig, ax=plt.subplots(1,1)
+ax.scatter(x=df['sitio'],y = df[parVariable])
+ax.set_xlabel('sitio')
+ax.set_ylabel('opciones')
+ax.set_title('Sitios vs Opciones')
 
+st.pyplot(fig)
